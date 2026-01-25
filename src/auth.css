@@ -1,0 +1,96 @@
+/* Full screen container with violet-black gradient */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a, #4b0082, #8a2be2);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Card style */
+.auth-box {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  max-width: 400px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+/* Headings */
+.auth-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #da70d6;
+}
+
+/* Link */
+.auth-buttom-text {
+  color: #da70d6;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.auth-buttom-text:hover {
+  color: #ffb6c1;
+}
+
+/* Labels */
+.auth-box label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #ccc;
+
+}
+
+/* Inputs */
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.auth-box input:focus {
+  outline: 2px solid #da70d6;
+}
+
+/* Button */
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #8a2be2;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-box button:hover {
+  background-color: #da70d6;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 30px 30px;
+  }
+
+  .auth-box h2 {
+    font-size: 1.5rem;
+  }
+}
