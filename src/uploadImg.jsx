@@ -40,16 +40,15 @@ const UploadImg = ({ user }) => {
 
     // Call ML backend
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/predict`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          user_id: user.id,
-          image_url: imageUrl
-        })
-      });
+     const response = await fetch("https://swethaxxgk-dr-ensemble.hf.space/run/predict", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+        user_id: user.id,
+        image_url: imageUrl
+    })
+});
+
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -136,6 +135,9 @@ const UploadImg = ({ user }) => {
             <div>
               <p style={{ color: "#fff" }}>
                 <b>Class:</b> {result.class}
+              </p>
+              <p>
+                 <b>Confidence:</b>{result.confidence}
               </p>
             </div>
           )}
