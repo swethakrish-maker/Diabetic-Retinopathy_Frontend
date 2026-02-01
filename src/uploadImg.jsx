@@ -40,7 +40,7 @@ const UploadImg = ({ user }) => {
 
     // Call ML backend
     try {
-     const response = await fetch("https://swethaxxgk-dr-ensemble.hf.space/run/predict", {
+     const response = await fetch("https://swethaxxgk-dr-ensemble.hf.space/predict", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
